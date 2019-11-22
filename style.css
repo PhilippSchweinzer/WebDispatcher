@@ -1,0 +1,70 @@
+#search {
+    font-size: 140px;
+    font-family: Inter, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    background: none;
+    width: 100%;
+    outline: 0;
+    color: #bde6fb;
+    border: 0px;
+    margin-top: 6%;
+    padding-bottom: 13%
+}
+
+#width_measure {
+    font-size: 140px;
+    font-family: Inter, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+#back-color {
+    background-color: rgb(43, 43, 43);
+    border-radius: 0em;
+}
+
+h1 {
+    display: inline;
+    padding-right: 2%;
+    padding-left: 2%;
+    transition: font-size 0.5s, color 0.5s;
+    padding-bottom: 0.45%;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                          supported by Chrome and Opera */
+}
+
+
+#author {
+    color: #6b6b6b;
+    position: fixed;
+    bottom: 4%;
+    align-self: center;
+}
+
+#github {
+    color: #6b6b6b;
+    position: fixed;
+    bottom: 1%;
+    align-self: center;
+}
+
+#explanation {
+    color: #6b6b6b;
+    position: fixed;
+    bottom: 7%;
+    align-self: center;
+}

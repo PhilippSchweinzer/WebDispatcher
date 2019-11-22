@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="UTF-8">
+<meta name="author" content="Philipp Schweinzer">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script type="application/javascript" src="dispatch.js"></script>
+</head>
+
+<body onkeydown="dispatch(event)">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div id="back-color"
+                    class="jumbotron min-vh-100 text-center m-0 d-flex flex-column justify-content-center">
+                    <div class="nowrap">
+                        <h1 id="choice-0" class="text-muted noselect" onclick="select(this.id)"
+                            onmouseover="mouseover(this.id)" onmouseout="mouseout(this.id)" unselectable="on">
+                            Google
+                        </h1>
+                        <h1 id="choice-1" class="text-muted noselect" onclick="select(this.id)"
+                            onmouseover="mouseover(this.id)" onmouseout="mouseout(this.id)">
+                            DuckDuckGo
+                        </h1>
+                        <h1 id="choice-2" class="text-muted noselect" onclick="select(this.id)"
+                            onmouseover="mouseover(this.id)" onmouseout="mouseout(this.id)">
+                            Wikipedia
+                        </h1>
+                    </div>
+
+                    <input id="search" class="" type="text" autocomplete="off" spellcheck="false" placeholder="Search"
+                        onkeydown="dispatch(event)" onkeyup="" oninput="measure()">
+                    <div id="explanation">
+                        Hold Ctrl and select to set <u>default</u> selection!
+                    </div>
+                    <div id="author">
+                        by Philipp Schweinzer
+                    </div>
+                    <a id="github" href="https://github.com/PhilippSchweinzer" target="_blank">
+                        Github
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span id="width_measure" style="position:fixed;left:-100%;"></span>
+
+</body>
+
+</html>
