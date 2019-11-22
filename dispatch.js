@@ -5,6 +5,7 @@ var keys = [];
 window.onload = function() {
     setInputLineHeight();
     loadDefaultSelection();
+    document.getElementById("search").focus();
 }
 
 //Track all keys that are currently pressed
