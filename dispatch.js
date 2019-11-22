@@ -81,7 +81,7 @@ function select(id) {
     }
 
     deselect();
-    document.getElementById(id).style.border = "3px solid #afafaf";
+    document.getElementById(id).style.border = "3px solid #bfbfbf";
     document.getElementById(id).style.borderRadius = "25px";
     selected_ids.push(id);
 
@@ -100,14 +100,14 @@ function mouseover(id) {
     if (selected_ids.indexOf(id) != -1) {
 
     } else {
-        document.getElementById(id).setAttribute('style', 'color: #afafaf !important; cursor: pointer; font-size: 50px; transition: font-size 0.5s, color 0.5s');
+        document.getElementById(id).setAttribute('style', 'color: #bfbfbf !important; cursor: pointer; font-size: 50px; transition: font-size 0.5s, color 0.5s');
         underlineIfDefaultSelection(id);
     }
 }
 
 function mouseout(id) {
     if (selected_ids.indexOf(id) != -1) {
-        document.getElementById(id).setAttribute('style', 'border: 3px solid #afafaf; border-radius: 25px; color: #afafaf !important; font-size: 50px;');
+        document.getElementById(id).setAttribute('style', 'border: 3px solid #bfbfbf; border-radius: 25px; color: #bfbfbf !important; font-size: 50px;');
     } else {
         document.getElementById(id).setAttribute('style', '');
     }
