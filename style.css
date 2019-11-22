@@ -72,13 +72,6 @@ h1 {
 #toggle-wrapper {
     z-index: 100;
     position: absolute;
-    top: 2vh;
-    right: 2vh;
-}
-
-#toggle-text {
-    position: absolute;
-    top: 2.45vh;
-    right: 11vh;
-    color: #6b6b6b;
+    top: 2%;
+    right: 1%;
 }
