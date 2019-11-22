@@ -32,7 +32,10 @@ function loadDefaultSelection() {
 
 function setDefaultSelection(id) {
     //remove old default underline
-    document.getElementById(localStorage.defaultSelection).style.textDecoration = "";
+    if(localStorage.defaultSelection) {
+        document.getElementById(localStorage.defaultSelection).style.textDecoration = "";
+    }
+    
 
     localStorage.defaultSelection = id;
     //text-decoration: underline;
