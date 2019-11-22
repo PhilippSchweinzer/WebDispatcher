@@ -8,7 +8,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <script type="application/javascript" src="dispatch.js"></script>
+
+
 </head>
 
 <body onkeydown="dispatch(event)">
@@ -49,6 +50,19 @@
     </div>
     <span id="width_measure" style="position:fixed;left:-100%;"></span>
 
+    <script type="application/javascript" src="dispatch.js"></script>
+    <script src="three.r92.min.js"></script>
+    <script src="vanta.net.min.js"></script>
+    <script>
+        const effect = VANTA.NET({
+            el: "#back-color",
+            color: 0x727272,
+            backgroundColor: 0x2b2b2b,
+            points: 8.00,
+            spacing: 19.00
+        })
+    </script>
 </body>
+
 
 </html>
