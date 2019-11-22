@@ -9,6 +9,14 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+
 
 </head>
 
@@ -18,6 +26,13 @@
             <div class="col-12 p-0">
                 <div id="back-color"
                     class="jumbotron min-vh-100 text-center m-0 d-flex flex-column justify-content-center">
+                    <div id="toggle-text">
+                        toggle animation
+                    </div>
+                    <div id="toggle-wrapper">
+                        <input id="toggle-event" type="checkbox" data-toggle="toggle" data-onstyle="dark"
+                            data-offstyle="light" data-style="border" checked>
+                    </div>
                     <div class="nowrap">
                         <h1 id="choice-0" class="text-muted noselect" onclick="select(this.id)"
                             onmouseover="mouseover(this.id)" onmouseout="mouseout(this.id)" unselectable="on">
@@ -44,23 +59,43 @@
                     <a id="github" href="https://github.com/PhilippSchweinzer" target="_blank">
                         Github
                     </a>
+
                 </div>
             </div>
         </div>
     </div>
+
     <span id="width_measure" style="position:fixed;left:-100%;"></span>
 
     <script type="application/javascript" src="dispatch.js"></script>
     <script src="three.r92.min.js"></script>
     <script src="vanta.net.min.js"></script>
     <script>
-        const effect = VANTA.NET({
+        var effect = VANTA.NET({
             el: "#back-color",
             color: 0x727272,
             backgroundColor: 0x2b2b2b,
             points: 8.00,
             spacing: 19.00
-        })
+        });
+
+        $('#toggle-event').bootstrapToggle('on')
+
+        $(function () {
+            $('#toggle-event').change(function () {
+                if ($(this).prop('checked')) {
+                    effect = VANTA.NET({
+                        el: "#back-color",
+                        color: 0x727272,
+                        backgroundColor: 0x2b2b2b,
+                        points: 8.00,
+                        spacing: 19.00
+                    });
+                } else {
+                    effect.destroy();
+                }
+            })
+        });
     </script>
 </body>
 
